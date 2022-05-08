@@ -1,0 +1,29 @@
+---
+title: "Sussman"
+output: html_document
+---
+```{r}
+library(sp)
+library(raster)
+library(sf)
+
+# Load vectors
+Mass_shp <- read_sf("C:/clark/Sussman/data/townssurvey_shp/TOWNSSURVEY_POLYM.shp")
+
+# Load Raster
+LC <- raster("C:/clark/Sussman/data/landcover_mass/mass_lc2.tif")
+
+# Cut image
+lapply(Mass_shp, function(x){
+  
+})
+```
+
+```{r}
+test <-  Mass_shp[1,]
+raster::crop(LC, test)
+#LC %>% crs()
+#test %>% crs()
+#plot(test)
+```
+
